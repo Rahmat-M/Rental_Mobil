@@ -1,4 +1,4 @@
-##Cara menjalankan web
+## Cara menjalankan web
 1. Download seluruh file dari repository ini
 2. buat folder Sewa_Mobil pada folder htdocs yang berada di direktori instalasi xampp
 3. contoh : xampp/htdocs/Sewa_Mobil
