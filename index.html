@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Rental Mobil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css"> 
+    <script>
+        function showPopup() {
+            alert("Data berhasil disimpan!");
+        }
+
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('status') && urlParams.get('status') === 'success') {
+                showPopup();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="nav-links">
+            <a href="index.html">Form Penyewaan</a>
+            <a href="tampilkan_data.php">Tampilkan Data</a>
+        </div>
+        <h2 class="header-title">Rental Mobil</h2>
+    </div>
+    
+    <div class="container">
+        <div class="description">
+            <h2>Hello </h2>
+            <p>Selamat datang di layanan rental mobil kami. Kami menawarkan berbagai pilihan mobil dengan harga terjangkau dan paket sewa menarik. Silakan pilih mobil dan program sewa yang sesuai dengan kebutuhan Anda.</p>
+        </div>
+        
+        <div class="form-container">
+            <h2>Form Penyewaan Mobil</h2>
+            <form id="rentalForm" method="post" action="simpan_data.php">
+                <label>Nama Penyewa:</label>
+                <input type="text" name="nama_penyewa" required><br><br>
+                
+                <label>Pilihan Mobil:</label>
+                <select name="nama_mobil" required>
+                    <option value="Avanza">Avanza</option>
+                    <option value="Innova">Innova</option>
+                    <option value="New Altis">New Altis</option>
+                    <option value="New Camry">New Camry</option>
+                    <option value="Alphard">Alphard</option>
+                </select><br><br>
+                
+                <label>Program Pilihan:</label>
+                <select name="program_pilihan" required>
+                    <option value="Paket 1">Paket 1 (4 hari - diskon 10%)</option>
+                    <option value="Paket 2">Paket 2 (7 hari - diskon 20%)</option>
+                    <option value="Paket 3">Paket 3 (10 hari - diskon 25%)</option>
+                    <option value="Harian">Non Paket / Harian</option>
+                </select><br><br>
+                
+                <label>Biaya extra (100.000/jam):</label>
+                <select name="pilihan_tambahan" required>
+                    <option value="Biaya 1">1 Jam</option>
+                    <option value="Biaya 2">4 Jam</option>
+                    <option value="Biaya 3">8 Jam</option>
+                    <option value="Biaya 4">12 Jam</option>
+                    <option value="Biaya 5">Tidak ada tambahan</option>
+
+                </select><br><br>
+                
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
